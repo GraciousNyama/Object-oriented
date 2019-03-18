@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+<body>
+	<script>
+
+
+
+function Message(messageBody, date, delivery, receiver ,sender){
+	this.text =  messageBody;
+	this.date =  date;
+	this.deliveryStatus= delivery;
+	this.to = receiver;
+	this.from= sender;
+	
+
+	this.display=function() {
+		document.write(this.text + "    was the message sent on" + this.date + "   by" + this.from+ "   to" + this.to + "   and delivered" + this.deliveryStatus +"<br>");
+	}
+}
+
+var message1 = new Message(" i love you","   12/04.2019","    sucess","   bae", "    baeluv");
+var message2= new Message(" dont eat all the food","   01/06/2019","    failed","   son","   mother");
+
+message1.display();
+message2.display()
+
+
+
+	</script>
+
+
+</body>
+
+</html>
