@@ -5,20 +5,29 @@
 	<script>
 
 
-function createStudent( firstName, lastName, gender,relationshipsStatus){ 
-	var student = {};
+//constructor
+function Student(firstName, lastName, gender,relationshipsStatus){
+	this.name = firstName;
+	this.surname = lastName;
+	this.gender = gender;
+	this.status = relationshipsStatus;
+	
 
-student.name =  firstName;
-student.surname =  lastName;
-student.gender =  gender;
-student.status =  relationshipsStatus;
-
-document.write("Hi my name is "+ student.name + student.surname + " and i am " + student.gender + " and i am"+ student.status + "<br>");
+	this.greeting =function() {
+		document.write("Hi my name is" +this.name+" and i am"+ this.status+ "<br>");
+	}
 }
-createStudent(" Gracious"," Nyama"," female"," very very single");
-createStudent(" Charity"," Goms"," female"," drunk in love")
-createStudent(" Kisha", " Jimms"," transgender"," bad bitch")
+//instantianting ( constructing) a new student
+var student1 = new Student("  Gracious"," Nyama","  female","  complicated");
+var student2 = new Student ("  Jerom"," Mkatsa","  male","  searching");
+
+student1.greeting();
+student2.greeting()
+
+
+
 	</script>
+
 
 </body>
 
